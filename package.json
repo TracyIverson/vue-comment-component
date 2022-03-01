@@ -1,22 +1,22 @@
 {
-  "name": "vue-juejin-comment",
-  "version": "1.0.0",
+  "name": "xtc-comment",
+  "version": "1.0.1",
   "private": false,
-  "description": "一个掘金社区风格的评论组件",
+  "description": "评论",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fenghan34/vue-comment-component"
+    "url": "https://github.com/TracyIverson/vue-comment-component"
   },
   "license": "MIT",
-  "author": "Feng Han <hi@fenghan.link>",
-  "main": "lib/vue-juejin-comment.umd.min.js",
+  "author": "会动的木头人",
+  "main": "lib/xtc-comment.umd.min.js",
   "files": [
     "lib"
   ],
   "scripts": {
     "build": "vue-cli-service build",
     "dev": "vue-cli-service serve",
-    "lib": "vue-cli-service build --target lib --name vue-juejin-comment --dest lib src/components/Comment/index.js",
+    "lib": "vue-cli-service build --target lib --name xtc-comment --dest lib src/components/Comment/index.js",
     "lint": "vue-cli-service lint",
     "format": "prettier . -w -u",
     "start": "npx serve dist"

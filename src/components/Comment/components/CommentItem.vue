@@ -2,7 +2,7 @@
   <div class="comment-item" :class="{ 'sub-comment-item': isSubComment }">
     <div class="comment">
       <!-- 评论或回复人头像 -->
-      <div class="nameAvatar" v-if="comment.user.nameAvatar">
+      <div v-if="comment.user.nameAvatar" class="nameAvatar">
         <div class="surname">{{ comment.user.name.substring(0, 1) }}</div>
       </div>
       <img
@@ -17,7 +17,7 @@
           <slot name="userMeta">
             <div class="user-popover-box">
               <span v-if="comment.user">{{
-                (comment.user.id ? comment.user.id + ' ' : '') +
+                comment.user.id + ' '+
                 comment.user.name +
                 (comment.user.author === true ? '（作者）' : '')
               }}</span>

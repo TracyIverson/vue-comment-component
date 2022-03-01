@@ -2,7 +2,7 @@
   <div id="comment" ref="comment">
     <!-- 顶部评论表单 -->
     <comment-form :upload-img="uploadImg" @form-submit="formSubmit">
-      <div class="nameAvatar" v-if="user.nameAvatar">
+      <div v-if="user.nameAvatar" class="nameAvatar">
         <div class="surname">{{ user.name.substring(0, 1) }}</div>
       </div>
       <img
@@ -80,7 +80,7 @@ import CommentForm from './components/CommentForm'
 import CommentList from './components/CommentList'
 import CommentItem from './components/CommentItem'
 export default {
-  name: 'JuejinComment',
+  name: 'XtcComment',
   components: { CommentList, CommentItem, CommentForm },
   inheritAttrs: false,
   model: {

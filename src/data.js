@@ -6,6 +6,7 @@ export const EXAMPLE_DATA = [
       id: '002',
       name: '我叫白云',
       avatar: require('./assets/image/comment.png'),
+      nameAvatar: true
     },
     createAt: '2020.11.24',
     likes: 1,
@@ -19,6 +20,7 @@ export const EXAMPLE_DATA = [
           id: '004',
           name: 'NARUTO',
           avatar: require('./assets/image/avatar2.jpg'),
+          nameAvatar: true
         },
         createAt: '2020.11.25',
       },
@@ -29,12 +31,14 @@ export const EXAMPLE_DATA = [
           id: '003',
           name: '我叫黑土',
           avatar: require('./assets/image/avatar3.jpg'),
+          nameAvatar: true
         },
         createAt: '2020.11.25',
         reply: {
           id: '001',
           name: 'NARUTO',
           avatar: require('./assets/image/avatar2.jpg'),
+          nameAvatar: true
         },
       },
     ],
@@ -46,6 +50,7 @@ export const EXAMPLE_DATA = [
       id: '002',
       name: '我叫黑土',
       avatar: require('./assets/image/avatar3.jpg'),
+      nameAvatar: true
     },
     createAt: '2020.12.5',
     childrenComments: [
@@ -56,6 +61,7 @@ export const EXAMPLE_DATA = [
           id: '001',
           name: 'NARUTO',
           avatar: require('./assets/image/avatar2.jpg'),
+          nameAvatar: true
         },
         createAt: '2020.12.6',
       },

@@ -1,11 +1,11 @@
-import JuejinComment from './index.vue'
+import XtcComment from './index.vue'
 
-JuejinComment.install = function (Vue) {
-  Vue.component(JuejinComment.name, JuejinComment)
+XtcComment.install = function (Vue) {
+  Vue.component(XtcComment.name, XtcComment)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-  JuejinComment.install(window.Vue)
+  XtcComment.install(window.Vue)
 }
 
-export default JuejinComment
+export default XtcComment
