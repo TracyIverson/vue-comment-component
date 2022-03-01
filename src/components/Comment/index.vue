@@ -2,7 +2,11 @@
   <div id="comment" ref="comment">
     <!-- 顶部评论表单 -->
     <comment-form :upload-img="uploadImg" @form-submit="formSubmit">
+      <div class="nameAvatar" v-if="user.nameAvatar">
+        <div class="surname">{{ user.name.substring(0, 1) }}</div>
+      </div>
       <img
+        v-if="!user.nameAvatar"
         class="avatar"
         :src="user.avatar || ''"
         @error="(e) => e.target.classList.add('error')"
@@ -493,5 +497,21 @@ export default {
       display: none;
     }
   }
+}
+
+.nameAvatar {
+  background-color: cornflowerblue;
+  width: 2.1336rem;
+  height: 2.1336rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0.8rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surname {
+  color: white;
 }
 </style>

@@ -35,21 +35,29 @@ export default {
   data() {
     const users = [
       {
+        id: '001',
         name: 'Up&Up',
         avatar: require('./assets/image/avatar1.jpg'),
+        nameAvatar: true,
         author: true,
       },
       {
+        id: '002',
         name: '我叫白云',
         avatar: require('./assets/image/comment.png'),
+        nameAvatar: false,
       },
       {
+        id: '003',
         name: '我叫黑土',
         avatar: require('./assets/image/avatar3.jpg'),
+        nameAvatar: false,
       },
       {
+        id: '004',
         name: 'NARUTO',
         avatar: require('./assets/image/avatar2.jpg'),
+        nameAvatar: false,
       },
     ]
     return {

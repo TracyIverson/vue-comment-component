@@ -2,7 +2,11 @@
   <div class="comment-item" :class="{ 'sub-comment-item': isSubComment }">
     <div class="comment">
       <!-- 评论或回复人头像 -->
+      <div class="nameAvatar" v-if="comment.user.nameAvatar">
+        <div class="surname">{{ comment.user.name.substring(0, 1) }}</div>
+      </div>
       <img
+        v-if="!comment.user.nameAvatar"
         class="avatar"
         :src="comment.user.avatar || ''"
         @error="(e) => e.target.classList.add('error')"
@@ -13,6 +17,7 @@
           <slot name="userMeta">
             <div class="user-popover-box">
               <span v-if="comment.user">{{
+                (comment.user.id ? comment.user.id + ' ' : '') +
                 comment.user.name +
                 (comment.user.author === true ? '（作者）' : '')
               }}</span>
@@ -294,5 +299,20 @@ export default {
       }
     }
   }
+}
+
+.nameAvatar {
+  background-color: cornflowerblue;
+  width: 2.1336rem;
+  height: 2.1336rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surname {
+  color: white;
 }
 </style>
